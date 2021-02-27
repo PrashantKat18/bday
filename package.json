@@ -1,0 +1,19 @@
+{
+  "name": "node-tutorial",
+  "version": "1.0.0",
+  "description": "Node Js Tutorial",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Daily Code Buffer",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "cors": "^2.8.5",
+    "debug": "4.1.1",
+    "express": "^4.17.1",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.2"
+  }
+}
