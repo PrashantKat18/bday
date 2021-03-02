@@ -743,7 +743,7 @@ class AddProvider {
     //This method is used to add/update the algorithm parameters.
     saveApply(req) {
         return new Promise((resolve, reject) => {
-            this.http.post(`${this.personApi}/enroll`, req).subscribe((resp) => {
+            this.http.post(`${this.personApi}/contact`, req).subscribe((resp) => {
                 if (resp.status == true) {
                     resolve(resp.data);
                     this.person = resp.data;
