@@ -3,7 +3,6 @@ const router = express();
 const nodemailer = require('nodemailer');
 
 router.post('/contact', (req, res) => {
-    console.log("ssssssssss");
     try {
         var name = req.body.name;
         var message = req.body.message;
@@ -17,7 +16,7 @@ router.post('/contact', (req, res) => {
         });
         var mailOptions = {
             from: 'prashantkat10796@gmail.com',
-            to: 'prashantkatiyarq10796@gmail.com',
+            to: 'prashantkatiyar10796@gmail.com',
             subject: 'email from application',
             text: " name : " + name + "\n " + "message : " + message + "\n " + "email : " + email + "\n "
         };
@@ -26,9 +25,14 @@ router.post('/contact', (req, res) => {
                 console.log(error);
             } else {
                 console.log('Email sent: ' + info.response);
+                var respobj = {
+                    status : "true",
+                    data : info.response
+                }
+                return res.status(200).json(respobj);
             }
         });
-        return res.status(200).json();
+       
     } catch (e) {
         console.log(e);
         return res.status(500).json({
@@ -37,6 +41,13 @@ router.post('/contact', (req, res) => {
         });
     }
 });
+
+
+// module.exports = router;
+
+
+
+// ****************************************************
 
 
 module.exports = router;
