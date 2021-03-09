@@ -1,8 +1,6 @@
 # Node-Demo
-I surprise my friend something like this please visit bellow link
+I surprise my friend something like this please visit bellow link<br>
 http://hbdayfabi.herokuapp.com/home
-
-this is little application I have use angular and node js for this application.
 
 Some screen shot 
 
