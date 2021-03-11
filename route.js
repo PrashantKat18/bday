@@ -26,13 +26,13 @@ router.post('/contact', (req, res) => {
             } else {
                 console.log('Email sent: ' + info.response);
                 var respobj = {
-                    status : "true",
-                    data : info.response
+                    status: "true",
+                    data: info.response
                 }
                 return res.status(200).json(respobj);
             }
         });
-       
+
     } catch (e) {
         console.log(e);
         return res.status(500).json({
@@ -41,6 +41,11 @@ router.post('/contact', (req, res) => {
         });
     }
 });
+
+router.get('/userActivity', (req, res) => {
+    console.log("hello user");
+    res.send('req is comming');
+})
 
 
 // module.exports = router;
